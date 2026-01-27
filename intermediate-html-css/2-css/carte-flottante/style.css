@@ -1,0 +1,39 @@
+:root {
+    --main-color: #129e17;
+
+}
+
+.card {
+    width: 6rem;
+    margin: auto;
+    border-color: var(--main-color);
+    border-style: solid;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.photo-container {
+    position: relative;
+    width: fit-content;
+    /* Le container prend juste la taille de l'image */
+}
+
+img {
+    width: 6rem;
+    border-radius: 1rem;
+    position: relative;
+
+
+}
+
+.status-badge {
+    position: absolute;
+    background-color: var(--main-color);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    /* Un petit bord blanc pour que ça ressorte ! */
+    bottom: 5px;
+    right: 5px;
+}

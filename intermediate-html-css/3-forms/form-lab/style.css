@@ -1,0 +1,10 @@
+label,
+input,
+select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    display: inline-block;
+}
