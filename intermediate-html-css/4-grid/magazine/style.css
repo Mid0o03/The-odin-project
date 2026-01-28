@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: red;
+    grid-column: span 3;
+}
+
+.main-content {
+    background-color: green;
+    grid-column: span 2;
+}
+
+.sidebar {
+    background-color: blue;
+    grid-column: span 1;
+}
+
+.footer {
+    background-color: black;
+    grid-column: span 3;
+}

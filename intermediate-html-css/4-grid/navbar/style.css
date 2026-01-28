@@ -1,0 +1,28 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    width: 50px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    /* Enlève le soulignement */
+    color: inherit;
+    /* Prend la couleur du parent (blanc ou noir selon ton nav) */
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--main-color);
+    /* Utilise ta variable pour l'interaction ! */
+}

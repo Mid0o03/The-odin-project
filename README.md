@@ -12,6 +12,12 @@ The `intermediate-html-css` folder contains projects related to the Intermediate
 
 *   **Form Advance**: An advanced form implementation with validation.
 
+The `intermediate-html-css/4-grid` folder contains projects focused on CSS Grid Layout:
+
+*   **Magazine**: A magazine-style layout using grid areas.
+*   **Player Grid**: A responsive grid layout for displaying items.
+*   **Navbar**: A navigation bar implementation using grid/flexbox.
+
 ## Goals
 
 *   Track learning progress.
