@@ -18,6 +18,10 @@ The `intermediate-html-css/4-grid` folder contains projects focused on CSS Grid 
 *   **Player Grid**: A responsive grid layout for displaying items.
 *   **Navbar**: A navigation bar implementation using grid/flexbox.
 
+The `intermediate-html-css/5-finalProject` folder contains the course capstone:
+
+*   **Admin Dashboard**: A complete dashboard layout with sidebar, header, and grid content.
+
 ## Goals
 
 *   Track learning progress.

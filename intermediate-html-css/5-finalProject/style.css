@@ -1,0 +1,151 @@
+/* RESET ET VARIABLES */
+:root {
+    --main-color: #1992d4;
+    /* Le bleu de la maquette */
+    --bg-light: #e2e8f0;
+    --sidebar-dark: #1992d4;
+    --card-accent: #f0b429;
+    /* Le jaune des projets */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* STRUCTURE GLOBALE */
+.container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    /* Sidebar fixe, le reste prend tout */
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background-color: var(--sidebar-dark);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* MAIN SECTION */
+.main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* Header en haut, contenu en bas */
+}
+
+/* HEADER */
+.main-header {
+    background-color: white;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.header-search,
+.header-user-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-welcome {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* CONTENT AREA (LA ZONE GRISE) */
+.main-content {
+    background-color: var(--bg-light);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    /* Grille asymétrique */
+    gap: 30px;
+}
+
+/* GRILLE DE PROJETS */
+.projects-section h3,
+.content-sidebar h3 {
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive automatique */
+    gap: 25px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 8px solid var(--card-accent);
+    /* L'effet barre jaune ! */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* SIDEBAR DROITE (Announcements & Trending) */
+.content-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.announcements-card,
+.trending-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
