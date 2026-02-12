@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="library-display" style="display: flex; gap: 20px; flex-wrap: wrap;"></div>
+    <button id="new-book-btn">AJOUTER UN LIVRE</button>
+
+    <dialog id="book-modal">
+        <form id="book-form" method="dialog">
+            <input type="text" id="title" placeholder="Titre" required>
+            <input type="text" id="author" placeholder="Auteur" required>
+            <input type="number" id="pages" placeholder="Nombre de pages" required>
+            <label>
+                Lu ? <input type="checkbox" id="read">
+            </label>
+            <div class="form-buttons">
+                <button type="submit" id="submit-btn">Valider</button>
+                <button type="button" id="close-btn">Annuler</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
