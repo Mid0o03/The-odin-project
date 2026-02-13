@@ -23,8 +23,8 @@ The `intermediate-html-css/5-finalProject` folder contains the course capstone:
 *   **Admin Dashboard**: A complete dashboard layout with sidebar, header, and grid content.
 
 The `JavaScript` folder contains projects related to the JavaScript course, such as:
-
 *   **Library**: A simple library application to track books.
+*   **Tic-Tac-Toe**: A browser game built using the Module Pattern and Factory Functions.
 
 ## Goals
 
