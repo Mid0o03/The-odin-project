@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #2bcbba;
+    --secondary-color: #4b6584;
+    --bg-color: #f1f2f6;
+    --sidebar-bg: #ffffff;
+    --text-color: #2f3542;
+    --danger-color: #fc5c65;
+    --low-priority: #26de81;
+    --medium-priority: #fed330;
+    --high-priority: #eb3b5a;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+h1,
+h2 {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: background 0.2s;
+}
+
+li:hover {
+    background-color: rgba(43, 203, 186, 0.1);
+}
+
+li.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.delete-project {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+li:hover .delete-project {
+    opacity: 1;
+}
+
+/* Forms */
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Todos */
+.todo-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #ccc;
+}
+
+.todo-item.low {
+    border-left-color: var(--low-priority);
+}
+
+.todo-item.medium {
+    border-left-color: var(--medium-priority);
+}
+
+.todo-item.high {
+    border-left-color: var(--high-priority);
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.todo-left,
+.todo-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+.edit-btn {
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+/* Modal - simple implementation */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+}

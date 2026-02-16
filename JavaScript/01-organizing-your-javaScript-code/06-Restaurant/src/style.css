@@ -1,0 +1,203 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #2d3436;
+    --primary-color: #d63031;
+    /* Rouge Brique */
+    --accent-color: #fdcb6e;
+    /* Jaune Moutarde */
+    --card-bg: #ffffff;
+    --nav-bg: #ffffff;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Georgia', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--nav-bg);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+nav button:active {
+    transform: translateY(0);
+}
+
+/* Main Content Layout */
+#content {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    /* Pour centrer le contenu quand il y a peu d'éléments */
+    justify-content: center;
+}
+
+/* Typography & Titles */
+h1 {
+    grid-column: 1 / -1;
+    /* Prend toute la largeur de la grille */
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Home Page Styles */
+/* Note: Since home page elements are direct children of grid, we need to handle them.
+   Ideally, loadHome should wrap content in a container, but we can manage with CSS.
+   We can make p (description) and img span full width or center them. */
+
+#content>p {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #636e72;
+}
+
+.home-image {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    display: block;
+    object-fit: cover;
+    max-height: 600px;
+}
+
+/* Menu Items (Cards) */
+.menu-item {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.menu-item h2 {
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    margin: 0;
+}
+
+.menu-item p strong {
+    /* Prix */
+    display: block;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.menu-item hr {
+    display: none;
+    /* On cache le hr moche du HTML original */
+}
+
+/* Footer (if strict footer needed, else just bottom spacing) */
+body {
+    padding-bottom: 4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    nav button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #content {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+}
