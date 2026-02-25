@@ -1,0 +1,19 @@
+{
+  "name": "01-testing-basics",
+  "version": "1.0.0",
+  "description": "Apprentissage des tests avec Jest",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
+  "keywords": [],
+  "author": "Mael Jerome",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^30.2.0"
+  }
+}
